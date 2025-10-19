@@ -41,6 +41,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     @Builder.Default
     private boolean enabled = true;
+    
+    @Column
+    private String city;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -40,16 +40,6 @@ public class UserController {
         return ResponseEntity.ok(userResponse);
     }
 
-    @GetMapping("/test")
-    @Operation(summary = "Test protected endpoint")
-    @ApiResponse(responseCode = "200", description = "Test successful")
-    @ApiResponse(responseCode = "401", description = "Unauthorized")
-    public ResponseEntity<MessageResponse> testProtectedEndpoint() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String message = "Hello " + authentication.getName() + "! This is a protected endpoint.";
-        return ResponseEntity.ok(MessageResponse.of(message));
-    }
-
     @GetMapping("/search")
     @Operation(summary = "Search users by email (example with validated parameter)")
     @ApiResponse(responseCode = "200", description = "Search completed successfully")

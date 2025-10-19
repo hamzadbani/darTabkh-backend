@@ -35,4 +35,6 @@ public class RegisterRequest {
     @NotNull(message = "Role cannot be null")
     @Builder.Default
     private Role role = Role.CLIENT;
+    
+    private String city;
 }

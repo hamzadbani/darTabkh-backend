@@ -16,4 +16,5 @@ public class UserResponse {
     private String email;
     private Role role;
     private boolean enabled;
+    private String city;
 }
