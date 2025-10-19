@@ -37,4 +37,10 @@ public class RegisterRequest {
     private Role role = Role.CLIENT;
     
     private String city;
+    
+    private String address;
+    
+    @Pattern(regexp = "^[+]?[0-9\\s\\-()]*$", message = "Phone number format is invalid")
+    @Size(max = 20, message = "Phone number must not exceed 20 characters")
+    private String phoneNumber;
 }

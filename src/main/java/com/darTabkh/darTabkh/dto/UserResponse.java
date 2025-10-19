@@ -17,4 +17,6 @@ public class UserResponse {
     private Role role;
     private boolean enabled;
     private String city;
+    private String address;
+    private String phoneNumber;
 }
